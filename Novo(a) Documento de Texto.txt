@@ -1,0 +1,19 @@
+CREATE DATABASE loja;
+
+USE loja;
+
+CREATE TABLE produtos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    codigo INT,
+    nome VARCHAR(100),
+    tipo VARCHAR(50),
+    sessao VARCHAR(50)
+);
+
+select * from produtos ;
+
+drop database loja;
+
+DROP TABLE produtos;
+
+ALTER TABLE produtos ADD codigo INT CHECK (codigo BETWEEN 1 AND 10);
